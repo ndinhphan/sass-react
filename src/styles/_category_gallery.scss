@@ -1,0 +1,61 @@
+@import "./config";
+
+.category_card {
+  display: flex;
+  margin: 1em 0;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  // width: 20%;
+  flex: 0 0 23%;
+  background: #ffffff;
+  border-radius: 16px;
+  &__thumbnail {
+    border-radius: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  &__button {
+    text-transform: capitalize;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.5em 0;
+    background: #ffffff;
+    border: 2px solid #e6e8ec;
+    box-sizing: border-box;
+    border-radius: 60px;
+  }
+}
+
+.category_gallery {
+  &__container {
+    display: flex;
+    background: #ffffff;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2em 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__button {
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+    &--more {
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      background: #3772ff;
+      border-radius: 18px;
+      padding: 0.5em 3em;
+      color: #ffffff;
+      cursor: pointer;
+      outline: inherit;
+      border: 0;
+    }
+  }
+}

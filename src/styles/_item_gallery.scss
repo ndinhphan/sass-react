@@ -1,0 +1,11 @@
+@import './config';
+
+
+.item_gallery {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  margin: 2em 0;
+  width: 100%;
+  justify-content: space-between;
+}
