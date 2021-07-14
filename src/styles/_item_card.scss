@@ -1,4 +1,3 @@
-@import "./config";
 
 .item_card {
   display: flex;
@@ -17,12 +16,13 @@
     width: 100%;
     margin-bottom: 1em;
   }
-  &__price__status--soon{
-    display:inline-block;
-    padding:0 0.25em;
-    color:#9757D7, 100%;
+  &__price__status--soon {
+    display: inline-block;
+    padding: 0 0.25em;
+    color: #9757d7;
     text-transform: uppercase;
-    border: 2px solid #9757D7;
+    font-weight: bold;
+    border: 2px solid #9757d7;
     border-radius: 4px;
     width: fit-content;
   }

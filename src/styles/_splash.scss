@@ -1,0 +1,32 @@
+.container__splash__text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  align-items: center;
+}
+.container__splash {
+  background-image: url("../assets/image/slide_thumbnail.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1em;
+  margin: 2em auto;
+  text-align: center;
+  padding: 7em 0;
+  color: white;
+}
+
+.splash__button {
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  background: #3772ff;
+  border-radius: 30px;
+}
+
+@media (max-width:900px){
+  .container__splash{
+    border-radius: 0;
+    width: 100%;
+  }
+}

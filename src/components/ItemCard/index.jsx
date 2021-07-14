@@ -1,6 +1,5 @@
 import React from "react";
-const ItemCard = (props) => {
-  const {item} = props
+const ItemCard = ({item}) => {
   const {
     title,
     currentEdition,
