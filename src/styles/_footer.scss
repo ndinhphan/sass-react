@@ -1,6 +1,29 @@
-@import './config';
+@import "./config";
 
-.footer__details{
-  display:flex;
+.footer {
+  margin: 2em auto;
+  padding: 4em 0;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  background: #F8F8FB;
+  &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__info {
+      width: 20%;
+      &__logo {
+        display: flex;
+        align-items: center;
+        LogoSvg {
+          margin-right: 1em;
+        }
+      }
+    }
+    &__about{
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

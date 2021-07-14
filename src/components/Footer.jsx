@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="footer__details">
         <div className="footer__details__info">
           <div className="footer__details__info__logo">
-            <LogoSvg className="footer__details__info__logo" />
+            <LogoSvg />
             <h2>yourlogo</h2>
           </div>
           <div className="footer__details__info__slogan">
