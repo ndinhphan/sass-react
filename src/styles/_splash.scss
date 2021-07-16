@@ -28,5 +28,8 @@
   .container__splash{
     border-radius: 0;
     width: 100%;
+    &__text{
+      width: 80%;
+    }
   }
 }

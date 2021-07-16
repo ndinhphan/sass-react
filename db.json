@@ -1,0 +1,126 @@
+{
+  "items": [
+    {
+      "title": "NFT Art Name 1",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_1.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 2",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_2.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 3",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_3.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 4",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_4.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 1",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_1.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 2",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_2.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 3",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_3.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    },
+    {
+      "title": "NFT Art Name 4",
+      "currentEdition": 20,
+      "finalEdition": 30,
+      "thumbnail": "/assets/image/nft_art_4.png",
+      "status": "available",
+      "price": 25000,
+      "currency": "USD",
+      "difference": 8833.42
+    }
+  ],
+  "categories": [
+    {
+      "name": "artwork",
+      "thumbnail": "/assets/image/category_artwork.png",
+      "icon": "/assets/svg/artwork.svg"
+    },
+    {
+      "name": "cards",
+      "thumbnail": "/assets/image/category_cards.png",
+      "icon": "/assets/svg/cards.svg"
+    },
+    {
+      "name": "collectibles",
+      "thumbnail": "/assets/image/category_collectibles.png",
+      "icon": "/assets/svg/collectibles.svg"
+    },
+    {
+      "name": "game",
+      "thumbnail": "/assets/image/category_game.png",
+      "icon": "/assets/svg/game.svg"
+    },
+    {
+      "name": "memes",
+      "thumbnail": "/assets/image/category_memes.png",
+      "icon": "/assets/svg/memes.svg"
+    },
+    {
+      "name": "music",
+      "thumbnail": "/assets/image/category_music.png",
+      "icon": "/assets/svg/music.svg"
+    },
+    {
+      "name": "photography",
+      "thumbnail": "/assets/image/category_photography.png",
+      "icon": "/assets/svg/photography.svg"
+    },
+    {
+      "name": "sports",
+      "thumbnail": "/assets/image/category_sports.png",
+      "icon": "/assets/svg/sports.svg"
+    }
+  ]
+}

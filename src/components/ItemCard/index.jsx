@@ -1,28 +1,44 @@
 import React from "react";
-const ItemCard = ({item}) => {
+
+const ItemCard = ({ item, type }) => {
   const {
-    title,
-    currentEdition,
-    finalEdition,
-    thumbnail,
+    name,
+    imageUrl,
+    numberOfCopies,
+    availableOfCopies,
     status,
-    price,
-    currency,
-    difference,
+    sellOrder,
   } = item;
   let itemprice;
-  if (status === 'available') itemprice = <h4 className="itemcard__price">{`${price} ${currency} ~ ${difference}`}</h4>;
-  else {
-    itemprice = (<div className="item_card__price__status--soon">Coming soon</div>)
+  let itemCardContent;
+  //available
+  if (type !== "customtype...") {
+    if (status === 2)
+      itemprice = (
+        <h4 className="itemcard__price">{`${sellOrder.price} ${
+          sellOrder.currencyName
+        } ~ ${Math.round(sellOrder.usdPrices * 100) / 100}$`}</h4>
+      );
+    else {
+      itemprice = (
+        <div className="item_card__price__status--soon">Coming soon</div>
+      );
+    }
+    itemCardContent = (
+      <div className="item_card">
+        <div className="item_card__thumbnail">
+          <img src={imageUrl} alt={name} />
+        </div>
+        <h3 title={name} className="item_card__title">
+          {name}
+        </h3>
+        <h4 className="item_card__edition">{`Edition ${availableOfCopies} of ${numberOfCopies}`}</h4>
+        {itemprice}
+      </div>
+    );
   }
-  return (
-    <div className="item_card">
-      <img className="item_card__thumbnail" src={thumbnail} alt={title} />
-      <h3 className="item_card__title">{title}</h3>
-      <h4 className="item_card__edition">{`Edition ${currentEdition} of ${finalEdition}`}</h4>
-      {itemprice}
-    </div>
-  );
+
+  return <div>{itemCardContent}</div>;
 };
 
 export default ItemCard;

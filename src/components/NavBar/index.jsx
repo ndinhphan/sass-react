@@ -3,13 +3,13 @@
 import { ReactComponent as LogoSvg } from "../../assets/svg/logo.svg";
 import { ReactComponent as BinanceSvg } from "../../assets/svg/binance-coin-bnb-logo 1.svg";
 
-const SearchBar =() =>{
-  
-}
+// const SearchBar =() =>{
+
+// }
 
 const NavBar = () => {
   return (
-    <div className="container__nav">
+    <div className="container container__nav">
       <nav className="navbar__left">
         <div className="navbar__left__logo">
           <LogoSvg className="navbar__left__logo__svg" />
