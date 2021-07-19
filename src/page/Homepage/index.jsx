@@ -1,19 +1,8 @@
 import ItemGallery from "../../components/ItemGallery/index";
 import CategoryGallery from "../../components/CategoryGallery/index";
 import Highlight from "../../components/Highlight/index";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { itemInitialize } from "../../action/itemActions";
-import { categoryInitialize } from "../../action/categoryActions";
+
 const Homepage = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(itemInitialize());
-    dispatch(categoryInitialize());
-  }, []);
-  const newArrivalsGallery = <ItemGallery type="new" />;
-  const comingSoonGallery = <ItemGallery type="comingsoon" />;
-  const categoryGallery = <CategoryGallery />;
   return (
     <div>
       <div className="container container__splash">
@@ -33,13 +22,14 @@ const Homepage = () => {
         <Highlight />
         <section className="new_arrivals__section">
           <h1>New Arrivals</h1>
-          {newArrivalsGallery}
+          {/* type="new" bad */}
+          <ItemGallery type="new" />
         </section>
         <section className="coming_soon__section">
           <h1>Coming Soon</h1>
-          {comingSoonGallery}
+          <ItemGallery type="comingsoon" />
         </section>
-        {categoryGallery}
+        <CategoryGallery />
       </div>
     </div>
   );
