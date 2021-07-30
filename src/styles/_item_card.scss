@@ -28,6 +28,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: bold;
+  }
+  &__edition,
+  &__price {
+    font-weight: bold;
   }
   &__price__status--soon {
     display: inline-block;

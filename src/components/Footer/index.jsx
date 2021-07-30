@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer__details">
             <div className="footer__details__logo">
               <div className="footer__details__logo__icon">
-                <LogoSvg />
+                <LogoSvg className="footer__details__logo__icon__svg" />
                 <h2>yourlogo</h2>
               </div>
               <div className="footer__details__logo__slogan">
@@ -23,21 +23,39 @@ const Footer = () => {
             <div className="footer__details__info">
               <div className="footer__details__info__about">
                 <h3 className="footer__details__info__about__title">ABOUT</h3>
-                <a href="/#" alt="" className="footer__details__info__about__link">
+                <a
+                  href="/#"
+                  alt=""
+                  className="footer__details__info__about__link"
+                >
                   About us
                 </a>
-                <a href="/#" alt="" className="footer__details__info__about__link">
+                <a
+                  href="/#"
+                  alt=""
+                  className="footer__details__info__about__link"
+                >
                   Terms of Service
                 </a>
-                <a href="/#" alt="" className="footer__details__info__about__link">
+                <a
+                  href="/#"
+                  alt=""
+                  className="footer__details__info__about__link"
+                >
                   Privacy Policy
                 </a>
-                <a href="/#" alt="" className="footer__details__info__about__link">
+                <a
+                  href="/#"
+                  alt=""
+                  className="footer__details__info__about__link"
+                >
                   FAQs
                 </a>
               </div>
               <div className="footer__details__info__contact">
-                <h3 className="footer__details__info__contact__title">CONTACT US</h3>
+                <h3 className="footer__details__info__contact__title">
+                  CONTACT US
+                </h3>
                 <h4 className="footer__details__info__contact__email">
                   support@nftify.com
                 </h4>

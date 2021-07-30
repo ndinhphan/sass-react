@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   &__button {
-    margin: 0 1em;
+    margin-left: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +53,16 @@
       border: 2px solid #e6e8ec;
       padding: 0.5em;
     }
+    &--search {
+      padding: 1em 2em;
+      background: black;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  &__hamburger {
+    display: none;
   }
 }
 
@@ -65,25 +75,67 @@ nav li {
   }
 }
 
-@media (max-width: 800px) {
-  .navbar__left {
-    flex-direction: column;
-    justify-content: center;
-    &__navlinks {
-      flex-direction: column;
-      align-items: center;
-    }
-    &__logo {
-      justify-content: center;
-
-    }
-  }
-  .navbar__right{
-
-    justify-content: center;
-  }
+@media (max-width: 1025px) {
   .container__nav {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    .navbar__left {
+      justify-content: center;
+      &__navlinks {
+        display: none;
+      }
+      &__logo {
+        justify-content: center;
+        border: 0;
+      }
+    }
+    .navbar__right {
+      &__button {
+        display: none;
+      }
+      &__searchbar {
+        display: none;
+      }
+      &__hamburger {
+        display: block;
+      }
+    }
+  }
+  .hamburger__container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 5fr 0.5fr 0.5fr;
+    .navbar__left {
+      &__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+      }
+      &__navlinks {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5em 0;
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+    .navbar__right {
+      display: flex;
+      flex-direction: column;
+      &__button {
+        display: flex;
+        margin: 0.5em 0 0;
+        &--white {
+          display: none;
+        }
+        &--search {
+          display: inline-block;
+        }
+      }
+      &__searchbar {
+        display: none;
+      }
+    }
   }
 }

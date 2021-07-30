@@ -42,11 +42,17 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1340px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1260px) {
   .container {
     width: 90%;
   }
 }
+
 @media (max-width: 900px) {
   .container {
     width: 95%;
