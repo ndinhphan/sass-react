@@ -1,7 +1,44 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { itemGetHighlight } from "../../action/itemActions";
 import ItemCard from "../ItemCard";
+
+const ItemCardDescription = ({ description }) => {
+  const [readMore, setReadMore] = useState(false);
+  const onClickReadMore = () => {
+    setReadMore(!readMore);
+  };
+  const renderDescription = readMore ? (
+    <>
+      <div
+        className="highlight__description"
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></div>
+      <span
+        style={{ cursor: "pointer" }}
+        onClick={onClickReadMore}
+        className="highlight__readmore"
+      >
+        Read less
+      </span>
+    </>
+  ) : (
+    <>
+      <div
+        className="highlight__description"
+        dangerouslySetInnerHTML={{ __html: description.substring(0, 600) }}
+      ></div>
+      <span
+        style={{ cursor: "pointer" }}
+        onClick={onClickReadMore}
+        className="highlight__readmore"
+      >
+        Read more
+      </span>
+    </>
+  );
+  return renderDescription;
+};
 
 const HighlightItemCard = ({ item }) => {
   const {
@@ -31,13 +68,7 @@ const HighlightItemCard = ({ item }) => {
           <h1>{`${sellOrder.price} ${sellOrder.currencyName}`}</h1>
           <h2>~ {`${Math.round(sellOrder.usdPrices * 100) / 100}$`}</h2>
         </div>
-        <div
-          className="highlight__description"
-          dangerouslySetInnerHTML={{ __html: description.substring(0, 600) }}
-        ></div>
-        <a href="/#" className="highlight__readmore">
-          Read more
-        </a>
+        <ItemCardDescription description={description} />
         <div className="highlight__options">
           <button className="button highlight__options__button__buy">
             Buy Now
@@ -53,20 +84,20 @@ const HighlightItemCard = ({ item }) => {
 
 const Highlight = () => {
   const { items } = useSelector((state) => state.itemReducer);
+  const { highlight } = items;
+  const dispatch = useDispatch();
+
   const itemHighlightParam = {
     objectIds: `60e3ca3980ba6406a0841983, 60da99f200b1370fbe8e97fb, 60da967500b1370fbe8e97ef`,
   };
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(itemGetHighlight(itemHighlightParam));
   }, []);
 
-  const { highlight } = items;
   // console.log("highlight items in highlight", highlight);
-  let highlightMain = "";
-  if (highlight[0] !== undefined) {
-    highlightMain = <HighlightItemCard item={highlight[0]} />;
-  }
+
+  const highlightMain =
+    highlight[0] !== undefined ? <HighlightItemCard item={highlight[0]} /> : "";
   const renderHighlightSidebar = highlight
     .slice(1)
     .map((item) => <ItemCard key={item._id} item={item} />);

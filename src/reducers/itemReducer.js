@@ -19,11 +19,20 @@ export const itemReducer = (state = initialState, action) => {
         highlight: highlightItems,
         comingsoon: comingsoonItems,
       } = action.data;
+
       // console.log(newItems, highlightItems, comingsoonItems);
-      let newState = { ...state };
-      if (newItems) newState.items.new = newItems;
-      if (highlightItems) newState.items.highlight = highlightItems;
-      if (comingsoonItems) newState.items.comingsoon = comingsoonItems;
+
+      // let newState = { ...state };
+      // if (newItems) newState.items.new = newItems;
+      // if (highlightItems) newState.items.highlight = highlightItems;
+      // if (comingsoonItems) newState.items.comingsoon = comingsoonItems;
+
+      const items = {
+        new: newItems ? newItems : state.items.new,
+        highlight: highlightItems ? highlightItems : state.items.highlight,
+        comingsoon: comingsoonItems ? comingsoonItems : state.items.comingsoon,
+      };
+      const newState = { items };
       console.log("newstate:", newState);
       return newState;
     default:

@@ -20,15 +20,24 @@ const Homepage = () => {
 
       <div className="container">
         <Highlight />
+
         <section className="new_arrivals__section">
-          <h1>New Arrivals</h1>
+          <div className="container__section__title">
+            <h1>New Arrivals</h1>
+            <a href="##">Browse All</a>
+          </div>
           {/* type="new" bad */}
           <ItemGallery type="new" />
         </section>
+
         <section className="coming_soon__section">
-          <h1>Coming Soon</h1>
+          <div className="container__section__title">
+            <h1>Coming Soon</h1>
+            <a href="##">Browse All</a>
+          </div>
           <ItemGallery type="comingsoon" />
         </section>
+
         <CategoryGallery />
       </div>
     </div>

@@ -4,12 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { categoryGet } from "../../action/categoryActions";
 const CategoryCard = ({ category }) => {
   const { name, imageUrl, iconUrl } = category;
-  let finalImageUrl = imageUrl;
-  let finalIconUrl = iconUrl;
-  if (!imageUrl.includes("https"))
-    finalImageUrl = `https://nftify.ekoiosblock.com/${imageUrl}`;
-  if (!iconUrl.includes("https"))
-    finalIconUrl = `https://nftify.ekoiosblock.com/${iconUrl}`;
+
+  const finalImageUrl = !imageUrl.includes("https")
+    ? `https://nftify.ekoiosblock.com/${imageUrl}`
+    : imageUrl;
+  const finalIconUrl = !iconUrl.includes("https")
+    ? `https://nftify.ekoiosblock.com/${iconUrl}`
+    : iconUrl;
+
   return (
     <div className="category_card">
       <div className="category_card__thumbnail">
@@ -29,13 +31,13 @@ const CategoryCard = ({ category }) => {
 
 const CategoryGallery = () => {
   const { categories } = useSelector((state) => state.categoryReducer);
+  const dispatch = useDispatch();
   const { categoryParam } = useState({
     limit: "8",
     offset: "0",
     objectIds:
       "60d29be5f7a197108f06f128, 60d29be5f7a197108f06f129, 60da7f5a00b1370fbe8e977a, 60d29be5f7a197108f06f12e, 60d29be5f7a197108f06f12f",
   });
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(categoryGet(categoryParam));
   }, [categoryParam]);
@@ -50,7 +52,6 @@ const CategoryGallery = () => {
   return (
     <section className="category_gallery">
       <h1>Shop by Category</h1>
-
       <div className="category_gallery__container">{categoryCards}</div>
       <div className="category_gallery__button__container">
         <button className="category_gallery__button--more">Load more</button>

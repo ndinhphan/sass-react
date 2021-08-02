@@ -14,6 +14,10 @@ h1 {
 h2 {
   font-size: 2rem;
 }
+
+h3 {
+  font-size: 1rem;
+}
 p {
   font-weight: 400;
   margin: 0;
@@ -32,6 +36,13 @@ body {
   margin: 0.5em auto;
   max-width: 1440px;
   width: 75%;
+}
+
+.container__section__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .button {
@@ -56,5 +67,21 @@ body {
 @media (max-width: 900px) {
   .container {
     width: 95%;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .container__section__title {
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    a {
+      font-size: 1.5rem;
+    }
   }
 }
